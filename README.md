@@ -2,7 +2,7 @@
 1. 限定用户名唯一
 在Schema中添加unique:true, 在options中添加useCreateIndex:true
 2. 密码加密
-安装bcrypt, 添加set函数进行hashSync(val, 10);加密
+安装bcryptjs, 添加set函数进行hashSync(val, 10);加密
 3. 用户登陆
 如果用户名不存在return res.status(422)
 4. 用户存在
