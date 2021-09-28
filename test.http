@@ -1,0 +1,27 @@
+@url=http://localhost:3000/api
+@json=Content-Type: application/json
+
+### 查询用户
+GET {{url}}/users
+
+### 注册
+POST {{url}}/register
+{{json}}
+
+{
+  "username": "user",
+  "password": "123456"
+}
+
+### 登录
+POST {{url}}/login
+{{json}}
+
+{
+  "username": "user",
+  "password": "123456"
+}
+
+### 获取个人信息 Baerer用于规定token格式
+GET {{url}}/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNTM0YjE0ZGJiMDI2NmFkZTkxYjA3NCIsImlhdCI6MTYzMjg0OTk3MX0.xG6OF0mqyHB1oedDjf1tVvRpc0UkW46RRpWLjOqj3E0
